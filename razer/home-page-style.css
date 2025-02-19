@@ -1,0 +1,229 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+/* header and shipping info code */
+.header {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    height: 45px;
+    padding: 0 20%;
+    background-color: black;
+    border-bottom: 3px solid #44D62C;
+}
+.header div {
+    width: 15px;
+    height: 50%;
+    background-repeat: no-repeat;
+    background-position: 50% 50%;
+    background-size: contain;
+}
+.header span {
+    padding: 12px;
+    font-size: 0.8rem; 
+    font-weight: 400;
+    letter-spacing: -1px;
+    color: rgb(198, 191, 191);
+}
+.header span:hover {
+    color: white;
+    cursor: pointer;
+    border-bottom: 3px solid white;
+}
+.header .logo {
+    width: 30px;
+    height: 75%;
+    background-image: url(/items/favicon.ico);
+}
+.header .search { background-image: url(/items/icon-search.svg); }
+.header .cart-icon { background-image: url(/items/cart_icon.svg); }
+
+.shipping-notice {
+    height: 35px;
+    line-height: 35px;
+    background-color: #555555;
+    color: white;
+    font-size: 0.6rem; 
+    text-align: center;
+    letter-spacing: 0.25px;
+}
+
+/* banners */
+.maincontent {
+    display: flex;
+    flex-direction: column;
+    padding: 0 35px;
+    background-color: black;
+}
+.maincontent div {
+    background-size: cover;
+    background-position: center;
+}
+
+
+.razer-wolverine-v3,
+.iron-mouse,
+.razer-sniper {
+    display: flex;
+    justify-content: center;
+    border-top: 7.5px solid #232222;
+    height: 600px;
+    width: 100%;
+}
+
+.razer-wolverine-v3 { background-image: url(items/razer-wolverine-v3-line-white-homepage-desktop2x.webp); }
+.iron-mouse { background-image: url(items/ironmouse-homepage-desktop2x.webp); }
+.razer-sniper { background-image: url(items/razer-sniper-elite-resistance-game-bundle-homepage-large-2x.webp); }
+
+.container-grid {
+    display: grid;
+    height: 1275px;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(3, 1fr);
+    gap: 7.5px;
+    background-color: #232222;
+}
+
+.razer-blade-16, 
+.razer-kuromi, 
+.razer-handheld, 
+.razer-esports, 
+.razer-iskur, 
+.world-of-warcraft {
+    display: flex;
+    justify-content: center;
+}
+
+.razer-blade-16 { background-image: url(/items/razer-blade-16-2025-b-950x580-desktop.webp); }
+.razer-kuromi { background-image: url(/items/razer-x-kuromi-b-950x580-desktop-collab.webp); }
+.razer-handheld { background-image: url(/items/razer-handheld-dock-chroma-b-950x580-desktop.webp); }
+.razer-esports { background-image: url(/items/razer-esports-line-b-950x580-desktop-v2.webp); }
+.razer-iskur { background-image: url(/items/razer-iskur-v2-x-950x580-desktop.webp); }
+.world-of-warcraft { background-image: url(/items/wow-20th-anniversary-campaign-b-950x580-desktop.webp); }
+
+/* text inside banners*/
+
+.banners-text {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    text-align: center;
+    color: white;
+    margin-top: 3%;
+    letter-spacing: -1px;
+    height: 25%;
+}
+.maincontent .heading { 
+    font-size: 2.5rem; 
+    font-weight: 600; 
+}
+.maincontent .text { 
+    font-size: 1.3rem; 
+}
+.maincontent .links { 
+    font-size: 1.1rem; 
+}
+.maincontent .container-grid .heading { 
+    font-size: calc(2.5rem / 1.25); 
+    font-weight: 600; 
+}
+.maincontent .container-grid .text { 
+    font-size: calc(1.3rem / 1.25); 
+}
+.maincontent .container-grid .links { 
+    font-size: calc(1.1rem /1.25 ); 
+}
+.maincontent .arrow { 
+    color: #44D62C; 
+    text-decoration: none; 
+}
+.maincontent .links:hover { 
+    text-decoration: underline; 
+    cursor: pointer; 
+}
+
+/* footer code */
+
+.footer {
+    height: 350px;
+    padding: 20px 20% 0;
+    background-color: #111111;
+    border-top: 7.5px solid #232222;
+}
+.footer-container { height: 100%; }
+.footer-links {
+    display: flex;
+    height: 90%;
+    width: 100%;
+    padding-bottom: 10px;
+    border-bottom: 1px solid rgb(147, 141, 141);
+}
+.links-left {
+    display: flex;
+    justify-content: space-between;
+    width: 65%;
+}
+.links-right {
+    width: 35%;
+    padding-right: 10px;
+    text-align: right;
+}
+.links-left div {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+.links-right span {
+    color: rgb(41, 225, 41);
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: 0.8rem; 
+    font-weight: 500;
+}
+.footer .footer-header {
+    color: white;
+}
+.footer .footer-header:hover {
+    text-decoration: none;
+    cursor: default;
+}
+.links-left span,
+.footer-terms span {
+    color: rgb(147, 141, 141);
+    font-size: 0.6rem;  
+}
+
+.shop { height: 100%; }
+.explore { height: 50%; }
+.support { height: 75%; }
+.company { height: 50%; }
+.followus {
+    height: 80%;
+    width: 60px;
+}
+
+.footer-terms {
+    height: 10%;
+    display: flex;
+    align-items: center;
+    gap: 25px;
+    color: rgb(147, 141, 141);
+}
+
+.footer-options span:hover,
+#loc:hover,
+.links-left span:hover {
+    text-decoration: underline;
+    cursor: pointer;
+    color: white;
+}
+
+.location {
+    width: 35%;
+    text-align: end;
+}
+.footer-options { width: 35%; }
+
