@@ -1,0 +1,79 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Figtree', sans-serif;
+}
+
+/* 
+header code */
+.header{
+    position: fixed;
+    display: flex;
+    justify-content: space-between;
+    width: 100vw;
+    height: 9vh;
+    font-size: 17.5px;
+    background-color: #FFFFFA;
+}
+.header-content{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: rgb(90, 95, 95);
+    width: 25%;
+    font-weight: 450;
+}
+.logo{
+    background-image: url(items/logo.svg);
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: 50% 50%;
+    width: 8%;
+    margin-left: 3%;
+}
+.buttons{
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    width: 20%;
+    margin-right: 3%;
+    margin-left: 3%;
+}
+
+.log-in , .get-started-now{
+    border: 1px solid black;
+    border-radius: 25px;
+    transition: border-bottom 0.1s ease-in-out;
+    
+}
+.get-started-now{
+    padding: 4% 9%;
+    background-color: #B0EC9C;
+}
+.log-in{
+    padding: 4% 9%;
+}
+
+.log-in:hover , .get-started-now:hover{
+    border-bottom: 5px solid black;
+    cursor: pointer;
+}
+
+
+.features , .channels , .pricing ,.blog{
+    display: flex;
+    align-items: center;
+    padding: 1% 3%;
+    border-radius: 25px;
+    background-color: #FFFFFA;
+    cursor: pointer;
+    transition: background-color 0.2s ease-in-out;
+}
+
+.features:hover , .channels:hover , .pricing:hover ,.blog:hover{
+    padding: 1% 3%;
+    border-radius: 25px;
+    background-color: #d7d7cb81;
+    cursor: pointer;
+}
