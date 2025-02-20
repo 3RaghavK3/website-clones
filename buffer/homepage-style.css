@@ -9,6 +9,8 @@
 header code */
 .header{
     position: fixed;
+    top: 0;
+    left: 0;
     display: flex;
     justify-content: space-between;
     width: 100vw;
@@ -41,25 +43,29 @@ header code */
     margin-left: 3%;
 }
 
-.log-in , .get-started-now{
+.log-in , .get-started-now,.get-started-container{
     border: 1px solid black;
     border-radius: 25px;
-    transition: border-bottom 0.1s ease-in-out;
+    transition: transform 0.1s ease-in-out, box-shadow 0.1s ease-in-out;
     
 }
-.get-started-now{
-    padding: 4% 9%;
+.get-started-now,.get-started-container{
+    padding: 10px 25px;
     background-color: #B0EC9C;
 }
 .log-in{
-    padding: 4% 9%;
+    padding: 10px 25px;
 }
 
-.log-in:hover , .get-started-now:hover{
-    border-bottom: 5px solid black;
+
+.log-in:hover, 
+.get-started-now:hover, 
+.get-started-container:hover {
     cursor: pointer;
+    box-shadow: 0px 5px 0px black;  
+    transform: translateY(-2px);  
+   
 }
-
 
 .features , .channels , .pricing ,.blog{
     display: flex;
@@ -68,12 +74,213 @@ header code */
     border-radius: 25px;
     background-color: #FFFFFA;
     cursor: pointer;
+    gap: 10px;
     transition: background-color 0.2s ease-in-out;
 }
 
 .features:hover , .channels:hover , .pricing:hover ,.blog:hover{
-    padding: 1% 3%;
-    border-radius: 25px;
+
     background-color: #d7d7cb81;
     cursor: pointer;
+}
+
+
+
+/* banners main content */
+
+.banner{  
+    display: flex;
+    justify-content: space-between; 
+    height: 60vh;
+    width: 90vw;
+    margin: 1% auto;
+    border-radius: 25px;
+    background-color: #CFC2FF;
+}
+
+
+.homepage-banner .banner{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 13vh;
+    height: 75vh;
+    background-color: #F3F3E9;
+}
+.homepage-banner .engage{
+    position: absolute;
+    top: 10%;
+    background: url(items/hero-engage.webp) no-repeat center/contain;
+    height: 20%;
+    width: 20%;
+}
+
+.homepage-banner .socials{
+    position: absolute;
+    top: 25%;
+    left: 1%;
+    background: url(items/socials.webp) no-repeat center/contain;
+    height: 20%;
+    width: 20%;
+
+}
+
+.homepage-banner .drag{
+    position: absolute;
+    top: 25%;
+    right: 1%;
+    background: url(items/drag.webp) no-repeat center/contain;
+    height: 30%;
+    width: 20%;
+
+}
+
+.homepage-banner .basketball{
+    position: absolute;
+    bottom: 15%;
+    left: 1%;
+    background: url(items/basketball.webp) no-repeat center/contain;
+    height: 30%;
+    width: 20%;
+
+}
+
+
+.homepage-banner .new-idea{
+    position: absolute;
+    bottom: 10%;
+    right: 4%;
+    background: url(items/newidea.webp) no-repeat center/contain;
+    height: 25%;
+    width: 20%;
+
+}
+.overwrite-content{
+    display: flex;
+    gap: 1rem;
+    flex-direction: column;
+    align-items: center;
+    height: 75%;
+    width: 75%;
+    background-color: #F3F3E9;
+
+}
+
+.overwrite-content .heading{
+    font-size: 7.5rem;
+    text-align: center;
+    color: rgba(0, 0, 0, 0.808);
+    font-weight: 600;
+}
+
+.overwrite-content .purpose{
+    font-size: 0.9rem;
+}
+
+.overwrite-content .buttons-container{
+    display: flex;
+    gap: 10px;
+}
+
+.overwrite-content .email{
+    padding: 10px 30% 10px 1%;
+    border-radius: 25px;
+    font-size: 1rem;
+    background-color: white;
+    text-align: left;
+}
+
+
+.overwrite-content .inputs{
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    width: 75%;
+    height: 12.5%;
+}
+.get-started-container{
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    align-items: center;
+ 
+}
+
+.side-arrow{
+    transition: transform 0.1s ease-in-out;
+}
+
+.get-started-container:hover .side-arrow{
+    transform: rotate(-45deg);
+
+
+}
+
+
+/* grid stats */
+
+
+.grid-stat{
+    display: grid;
+    padding: 3% 7.5% 3% 7.5%;
+    height: 32vh;
+    grid-template-columns: repeat(3,1fr);
+    grid-template-rows: 1fr;
+    gap: 50px;
+    letter-spacing: 1px;
+    font-weight: 500;
+}
+
+.element{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 10px;
+    align-items: center;
+    border: 1px solid black;
+    border-radius: 25px;
+}
+
+.grid-stat .number{
+    font-size: 3rem;
+}
+
+.publish .banner{
+    padding: 2%;
+    justify-content: space-around;
+}
+
+.publish .text{
+    border: 1px solid red;
+    width: 40%;
+}
+
+.publish .schedule-post{
+    background: url(items/schedule.webp) no-repeat center/contain;
+    border: 1px solid green;
+    width: 40%;
+}
+
+.publish .get-started-container{
+    padding:1.5% 0% ;
+    margin: 5% 0%;
+    width: 27%;
+    background-color: #283E3B;
+    color: white;
+    
+    
+    
+}
+
+.publish .text{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    
+}
+
+
+.feature-list{
+    list-style-type: none;
+    line-height: 2.5rem;
 }
